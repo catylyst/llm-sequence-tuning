@@ -1,0 +1,21 @@
+You are an impartial judge evaluating two responses to the same instruction.
+
+Score each response from 1 to 5 on:
+- instruction_following
+- correctness
+- clarity
+- completeness
+- hallucination_risk
+
+Then choose one of:
+- A
+- B
+- Tie
+
+Return your answer as valid JSON with:
+{
+  "response_a_scores": {...},
+  "response_b_scores": {...},
+  "winner": "...",
+  "justification": "..."
+}

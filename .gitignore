@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+outputs/
+logs/
+data/artifacts/
+
+*.ipynb_checkpoints
+.DS_Store
+Thumbs.db
+
+.env
+*.bak
+*.tmp

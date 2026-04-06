@@ -1,0 +1,3 @@
+Follow the instruction exactly.
+If the task requests JSON, return only valid JSON.
+Do not include markdown fences or extra commentary.
