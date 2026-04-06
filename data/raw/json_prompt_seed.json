@@ -1,0 +1,116 @@
+[
+  {
+    "id": "json_seed_0001",
+    "task_type": "json_extraction",
+    "instruction": "Extract the named entities into valid JSON with keys person, organization, location, and date.",
+    "input": "On March 12, 2025, Sarah Chen joined OpenAI in San Francisco.",
+    "expected_schema": {
+      "person": "string",
+      "organization": "string",
+      "location": "string",
+      "date": "string"
+    }
+  },
+  {
+    "id": "json_seed_0002",
+    "task_type": "json_extraction",
+    "instruction": "Extract the product order details into valid JSON with keys customer_name, product, quantity, and shipping_state.",
+    "input": "Michael Torres ordered 3 wireless keyboards to be shipped to Texas.",
+    "expected_schema": {
+      "customer_name": "string",
+      "product": "string",
+      "quantity": "integer",
+      "shipping_state": "string"
+    }
+  },
+  {
+    "id": "json_seed_0003",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON student profile using the required schema.",
+    "input": "Schema: name (string), age (integer), major (string), gpa (number), enrolled (boolean). Create a realistic example.",
+    "expected_schema": {
+      "name": "string",
+      "age": "integer",
+      "major": "string",
+      "gpa": "number",
+      "enrolled": "boolean"
+    }
+  },
+  {
+    "id": "json_seed_0004",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object for a restaurant reservation.",
+    "input": "Schema: customer_name (string), party_size (integer), reservation_time (string), indoor_seating (boolean).",
+    "expected_schema": {
+      "customer_name": "string",
+      "party_size": "integer",
+      "reservation_time": "string",
+      "indoor_seating": "boolean"
+    }
+  },
+  {
+    "id": "json_seed_0005",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the sentiment of the text and return valid JSON with keys label and rationale. Allowed labels: positive, negative, neutral.",
+    "input": "The laptop battery life is acceptable, but the keyboard feels cheap.",
+    "expected_schema": {
+      "label": "string",
+      "rationale": "string"
+    }
+  },
+  {
+    "id": "json_seed_0006",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the support ticket priority and return valid JSON with keys label and rationale. Allowed labels: low, medium, high, urgent.",
+    "input": "The production API is down and all customer transactions are failing.",
+    "expected_schema": {
+      "label": "string",
+      "rationale": "string"
+    }
+  },
+  {
+    "id": "json_seed_0007",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON and return only corrected valid JSON.",
+    "input": "{\"name\": \"Alice\", \"age\": 29, \"skills\": [\"python\", \"sql\",]}",
+    "expected_schema": {
+      "name": "string",
+      "age": "integer",
+      "skills": "array[string]"
+    }
+  },
+  {
+    "id": "json_seed_0008",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON and return only corrected valid JSON.",
+    "input": "{name: \"Carlos\", \"department\": \"finance\", \"active\": true}",
+    "expected_schema": {
+      "name": "string",
+      "department": "string",
+      "active": "boolean"
+    }
+  },
+  {
+    "id": "json_seed_0009",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Generate valid JSON arguments for a weather tool call with keys city, state, and unit.",
+    "input": "Get the weather for Austin, Texas in Fahrenheit.",
+    "expected_schema": {
+      "city": "string",
+      "state": "string",
+      "unit": "string"
+    }
+  },
+  {
+    "id": "json_seed_0010",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Generate valid JSON arguments for a calendar scheduling tool with keys title, date, time, and duration_minutes.",
+    "input": "Schedule a meeting called Project Sync on April 10, 2026 at 2:30 PM for 45 minutes.",
+    "expected_schema": {
+      "title": "string",
+      "date": "string",
+      "time": "string",
+      "duration_minutes": "integer"
+    }
+  }
+]

@@ -14,8 +14,20 @@ Then choose one of:
 
 Return your answer as valid JSON with:
 {
-  "response_a_scores": {...},
-  "response_b_scores": {...},
-  "winner": "...",
-  "justification": "..."
+  "response_a_scores": {
+    "instruction_following": 0,
+    "correctness": 0,
+    "clarity": 0,
+    "completeness": 0,
+    "hallucination_risk": 0
+  },
+  "response_b_scores": {
+    "instruction_following": 0,
+    "correctness": 0,
+    "clarity": 0,
+    "completeness": 0,
+    "hallucination_risk": 0
+  },
+  "winner": "A",
+  "justification": ""
 }
