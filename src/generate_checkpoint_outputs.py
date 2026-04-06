@@ -110,6 +110,7 @@ def main():
             "instruction": ex.get("instruction", ""),
             "input": ex.get("input", ""),
             "reference_output": ex.get("output", ""),
+            "expected_schema": ex.get("expected_schema", {}),
             "model_output": generated_text,
             "checkpoint": args.checkpoint,
             "eval_type": args.eval_type,
